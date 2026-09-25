@@ -1,0 +1,13 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.13.11-hotspot",
+            "default": true
+        }
+    ],
+    "java.project.sourcePaths": ["src/main/java"],
+    "java.project.outputPath": "bin",
+    "java.import.maven.enabled": false,
+    "java.import.gradle.enabled": false
+}
