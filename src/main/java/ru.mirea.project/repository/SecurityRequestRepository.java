@@ -26,7 +26,7 @@ public class SecurityRequestRepository {
 
     public List<SecurityRequest> findAll() throws SQLException {
         List<SecurityRequest> list = new ArrayList<>();
-        String sql = "SELECT * FROM secutiry_requests ORDER BY id";
+        String sql = "SELECT * FROM security_requests ORDER BY id";
         try (Connection conn = DatabaseManager.getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql)) {

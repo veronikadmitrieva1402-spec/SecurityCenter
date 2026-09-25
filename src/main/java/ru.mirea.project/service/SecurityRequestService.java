@@ -41,6 +41,19 @@ public class SecurityRequestService {
         }
     }
 
+
+    public SecurityRequest getRequestById(int id) {
+        try {
+            SecurityRequest req = repository.findById(id);
+            if (req == null) {
+                throw new EntityNotFoundException("Заявка с ID " + id + " не найдена.");
+            }
+            return req;
+        } catch (SQLException e) {
+            throw new RuntimeException("Ошибка БД: " + e.getMessage());
+        }
+    }
+
     public void updateStatus(int id, String newStatusStr) {
         try {
             SecurityRequest req = repository.findById(id);
